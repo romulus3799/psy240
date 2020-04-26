@@ -9,14 +9,15 @@ $('.button').click((e) => {
     let target = $(e.target)
     let num = target.attr("number");
 
-    // Set feedback text
-    $(`p[number=${num}]`).text(target.hasClass('correct') ? CORRECTTEXT : INCORRECTTEXT);
-
-    // Show text
-    $(`div[number=${num}]`).toggleClass("hidden");
-
-    // Style buttons
+    // Style and disable buttons
     $(`button[number=${num}]`).not(".correct").toggleClass("is-danger");
     $(`button[number=${num}].correct`).toggleClass("is-primary");
     $(`button[number=${num}]`).attr("disabled", 1);
+
+    // Set message box color
+    $(`article[number=${num}].message`).toggleClass(target.hasClass('correct') ? 'is-primary' : 'is-danger');
+
+    // Show message box
+    $(`div[number=${num}]`).toggleClass("hidden");
+
 });
