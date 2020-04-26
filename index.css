@@ -12,3 +12,23 @@
 .hidden {
     display: none;
 }
+.is-primary.is-bold {
+  background-image: linear-gradient(180deg, #009e6c 0%, #00d1b2 71%, #00e7eb 100%) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .is-primary.is-bold .navbar-menu {
+    background-image: linear-gradient(180deg, #009e6c 0%, #00d1b2 71%, #00e7eb 100%) !important;
+  }
+}
+.is-dark.is-bold {
+  /* background-image: linear-gradient(180deg, #1f191a 0%, #3298dc 100%); */
+  background-image: linear-gradient(180deg, #00e7eb 0%, #3298dc 50%, #3f393a 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .is-dark.is-bold {
+    /* background-image: linear-gradient(141deg, #1f191a 0%, #3298dc 71%, #46403f 100%); */
+    background-image: linear-gradient(180deg, #00e7eb 0%, #1f191a 100%);
+  }
+}

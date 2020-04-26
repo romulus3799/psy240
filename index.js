@@ -1,5 +1,5 @@
 const CORRECTTEXT = "Correct!";
-const INCORRECTTEXT = "Not quite!";
+const INCORRECTTEXT = "Not quite! The correct answer is:";
 
 let score = 0;
 let points = 0;
