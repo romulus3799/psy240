@@ -12,7 +12,15 @@ $('.button').click((e) => {
     // Style and disable buttons
     $(`button[number=${num}]`).not(".correct").toggleClass("is-danger");
     $(`button[number=${num}].correct`).toggleClass("is-primary");
-    $(`button[number=${num}]`).attr("disabled", 1);
+    target.toggleClass('got_selected');
+    $(`button[number=${num}]`).not(".got_selected").attr("disabled", 1);
+    target.attr("stealth_disabled", 1);
+    target.keydown(function(event){
+        if(event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
 
     // Set message box color
     $(`article[number=${num}].message`).toggleClass(target.hasClass('correct') ? 'is-primary' : 'is-danger');
