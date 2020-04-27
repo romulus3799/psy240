@@ -36,16 +36,6 @@
     cursor: not-allowed !important;
     pointer-events: none;
 }
-
-/* .footer {
-    position: fixed !important;
-} */
-.Site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.Site-content {
-  flex: 1;
+header.level {
+    margin-bottom: 0 !important;
 }
