@@ -10,9 +10,11 @@ $('.button').click((e) => {
     let num = target.attr("number");
 
     // Style and disable buttons
+    $(`button[number=${num}]`).toggleClass("is-link");
     $(`button[number=${num}]`).not(".correct").toggleClass("is-danger");
     $(`button[number=${num}].correct`).toggleClass("is-primary");
     target.toggleClass('got_selected');
+    target.toggleClass('is-focused');
     $(`button[number=${num}]`).not(".got_selected").attr("disabled", 1);
     target.attr("stealth_disabled", 1);
     target.keydown(function(event){
